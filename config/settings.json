@@ -1,0 +1,42 @@
+{
+  "app": {
+    "name": "Karaoke Studio",
+    "version": "1.0",
+    "author": "Sandra van Buggenum | SnowY4you",
+    "theme": "dark",
+    "default_font": "Arial",
+    "bold_font": "Arial-Bold"
+  },
+  "audio_separator": {
+    "model_filename": "UVR-MDX-NET-Inst_HQ_3.onnx",
+    "output_format": "WAV",
+    "sample_rate": 44100
+  },
+  "whisperx": {
+    "model_size": "base",
+    "batch_size": 16,
+    "compute_type": "float16",
+    "device": "cuda"
+  },
+  "renderer": {
+    "fps": 24,
+    "resolution": [1920, 1080],
+    "video_codec": "libx264",
+    "audio_codec": "aac",
+    "lyrics": {
+      "countdown_seconds": 5,
+      "font_size": 52,
+      "active_color": "#00FFFF",
+      "inactive_color": "#FFFFFF",
+      "highlight_color": "#FF007F",
+      "bg_box_color": "#000000",
+      "bouncing_ball_color": [255, 0, 128],
+      "bouncing_ball_radius": 14
+    }
+  },
+  "playback": {
+    "volume": 80,
+    "hardware_acceleration": true,
+    "cast_device": null
+  }
+}
