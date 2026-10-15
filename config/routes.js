@@ -1,0 +1,1 @@
+// Frontend view & IPC channel definitions

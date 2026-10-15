@@ -1,0 +1,22 @@
+# ==========================================
+# Spotify Search API
+# ==========================================
+services:
+  spotify:
+    base_url: "https://api.spotify.com/v1"
+    auth_type: "Bearer"
+    default_headers:
+      Content-Type: "application/json"
+    endpoints:
+      search:
+        path: "/search"
+        method: "GET"
+        description: "Search for items (tracks, artists, albums, etc.)"
+        default_params:
+          type: "artist,track"
+          market: "se"
+          limit: 10
+          offset: 5
+        query_builders:
+          # Defines how dynamic variables are interpolated into the 'q' parameter
+          search_query_template: "{artist} {track}"
